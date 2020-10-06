@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Index
+{% endblock %}
+
+{% block main %}
+<table style="width:100%; border: 1px solid black; border-collapse: collapse;">
+<tr>
+    <th>Party Name</th>
+    <th>Dorm/House</th>
+    <th>In</th>
+    <th>Date</th>
+    <th>Hosted By</th>
+</tr>
+
+    {% for key,value in parties.items()%}
+        <td >{{ key }}</td>
+        <td>{{ value[0] }}</td>
+        <td>{{ value[1] }}</td>
+        <td>{{ value[2] }}</td>
+        <td>{{ value[3] }}</td>
+        </tr>
+    {%endfor%}
+{% endblock %}

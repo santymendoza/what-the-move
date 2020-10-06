@@ -1,0 +1,22 @@
+
+table, th, td
+{
+  border: 1px solid black;
+}
+th
+{
+  background-color: #041F60;
+  color:white;
+}
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.text
+{
+  text-align:center
+}
+

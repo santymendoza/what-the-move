@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    RSVP Info
+{% endblock %}
+
+{% block main %}
+<div>
+<form action="/info" method="post">
+
+    <h1 style="text-align:center">
+        Select a party to see RSVP list.
+    </h1>
+        <!-- Drop down menu. -->
+    <select name = "party" style = "display: block; margin: 0 auto;">
+        <option value="0">Select party:</option>
+        {% for party in partyList%}
+            <option value="{{ party }}" style = "text-align:center;">{{ party }}</option>
+        {%endfor%}
+    </select>
+</div>
+
+    <!-- Submit button. -->
+
+<div>
+    <button class="btn btn-primary" type="submit" style = "margin-left: 45%; margin-right:45%;width: 10%;">More Info!</button>
+</div>
+</form>
+{% endblock %}

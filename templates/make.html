@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Make a Party!
+{% endblock %}
+
+{% block main %}
+    <form action="/make" method="post">
+        <div class="form-group">
+            <input autocomplete="off" autofocus class="form-control userInput" name="partyName" placeholder="Party Name" type="text" style ="margin-left: 35%;margin-right:35%;width: 30%;">
+        </div>
+        <div class="form-group">
+            <input class="form-control" name="date" type="datetime-local" placeholder="Choose a Date" style = "margin-left: 35%;margin-right:35%;width: 30%;">
+        </div>
+        <div class="form-group" style = " margin: 30px auto; width: 450px;">
+            <input type="text" class="form-control" name="location" placeholder="Dorm/House" style = "width: 50%; display: inline-block;">
+            <input type="text" class="form-control" name="spot" placeholder="Room number/House Hall" style = "width: 49%; display: inline-block;">
+        </div>
+        <button class="btn btn-primary" type="submit" style = "margin-left: 45%; margin-right:45%;width: 10%;">Post Party!</button>
+
+    </form>
+
+
+{% endblock %}

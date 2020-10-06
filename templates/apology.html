@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Apology
+{% endblock %}
+
+{% block main %}
+    <!-- Apology page with a picture and a message. -->
+    <img src="static/oops.png" class = "center">
+    <h1 class = "text">{{ errorMessage }}</h1>
+{% endblock %}

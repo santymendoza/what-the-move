@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    RSVP
+{% endblock %}
+
+{% block main %}
+<div>
+<form action="/rsvp" method="post">
+    <h1 style="text-align:center">
+        Select a party to RSVP.
+    </h1>
+    <select name = "party" style = "display: block; margin: 0 auto;">
+        <option value="0">Select party:</option>
+        {% for party in partyList%}
+            <option value="{{ party }}">{{ party }}</option>
+        {%endfor%}
+    </select>
+</div>
+<div>
+    <input autocomplete="off" autofocus class="form-control" name="offering" placeholder="What will you bring?" type="text" style="margin-left: 25%; margin-right:25%; width:49%">
+</div>
+<div>
+    <button class="btn btn-primary" type="submit" style = "margin-left: 45%; margin-right:45%;width: 10%;">RSVP!</button>
+</div>
+</form>
+{% endblock %}
